@@ -28,9 +28,11 @@
       <mat-icon>menu</mat-icon>
     </button>
 
-    <span class="spacer"></span>
+    <span class="spacer">{{ user?.email }}</span>
+    <!-- el user es un getter, no una propiedad, por eso es que tiene una
+    sintaxis similar a la de una variable -->
 
-    <button mat-button>
+    <button mat-button (click)="onLogout()">
       LogOut
     </button>
 
